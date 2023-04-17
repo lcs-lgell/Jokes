@@ -15,6 +15,7 @@
 		EE2D459F29E9ACF500112B46 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D459E29E9ACF500112B46 /* NetworkService.swift */; };
 		EEA4B2BB29EDC25500C4D940 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = EEA4B2BA29EDC25500C4D940 /* Blackbird */; };
 		EEA4B2BD29EDC34100C4D940 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EEA4B2BC29EDC34100C4D940 /* db.sqlite */; };
+		EEA4B2C029EDC41A00C4D940 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4B2BF29EDC41A00C4D940 /* AppDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EE2D459B29E9AADA00112B46 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		EE2D459E29E9ACF500112B46 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EEA4B2BC29EDC34100C4D940 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		EEA4B2BF29EDC41A00C4D940 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				EE2D458929E9A61300112B46 /* JokesApp.swift */,
+				EEA4B2BE29EDC3FE00C4D940 /* Helpers */,
 				EE2D459D29E9ACD000112B46 /* Services */,
 				EE2D459A29E9AAC400112B46 /* Model */,
 				EE2D459729E9A6E400112B46 /* Views */,
@@ -100,6 +103,14 @@
 				EE2D459E29E9ACF500112B46 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EEA4B2BE29EDC3FE00C4D940 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EEA4B2BF29EDC41A00C4D940 /* AppDatabase.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				EE2D459929E9A75C00112B46 /* JokeView.swift in Sources */,
 				EE2D459F29E9ACF500112B46 /* NetworkService.swift in Sources */,
 				EE2D459C29E9AADA00112B46 /* Joke.swift in Sources */,
+				EEA4B2C029EDC41A00C4D940 /* AppDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
