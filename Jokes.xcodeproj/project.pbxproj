@@ -16,6 +16,7 @@
 		EEA4B2BB29EDC25500C4D940 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = EEA4B2BA29EDC25500C4D940 /* Blackbird */; };
 		EEA4B2BD29EDC34100C4D940 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = EEA4B2BC29EDC34100C4D940 /* db.sqlite */; };
 		EEA4B2C029EDC41A00C4D940 /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4B2BF29EDC41A00C4D940 /* AppDatabase.swift */; };
+		EEA4B2C229EDC56300C4D940 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4B2C129EDC56300C4D940 /* FavouritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EE2D459E29E9ACF500112B46 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		EEA4B2BC29EDC34100C4D940 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		EEA4B2BF29EDC41A00C4D940 /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
+		EEA4B2C129EDC56300C4D940 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				EE2D459829E9A75C00112B46 /* JokeView.swift */,
+				EEA4B2C129EDC56300C4D940 /* FavouritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				EE2D459929E9A75C00112B46 /* JokeView.swift in Sources */,
 				EE2D459F29E9ACF500112B46 /* NetworkService.swift in Sources */,
 				EE2D459C29E9AADA00112B46 /* Joke.swift in Sources */,
+				EEA4B2C229EDC56300C4D940 /* FavouritesView.swift in Sources */,
 				EEA4B2C029EDC41A00C4D940 /* AppDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
