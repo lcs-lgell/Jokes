@@ -12,6 +12,8 @@ struct JokesApp: App {
     var body: some Scene {
         WindowGroup {
             JokeView()
+            // Make the databse accessible to all the different views.
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 }
