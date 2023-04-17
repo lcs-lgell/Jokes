@@ -88,5 +88,7 @@ struct JokeView: View {
 struct JokeView_Previews: PreviewProvider {
     static var previews: some View {
         JokeView()
+        // Make the databse accessible to all the different views.
+            .environment(\.blackbirdDatabase, AppDatabase.instance)
     }
 }

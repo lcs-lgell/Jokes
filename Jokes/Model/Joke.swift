@@ -8,7 +8,7 @@
 import Blackbird
 import Foundation
 
-struct Joke: Identifiable, Codable {
+struct Joke: Identifiable, Codable, BlackbirdModel {
     @BlackbirdColumn var type: String
     @BlackbirdColumn var setup: String
     @BlackbirdColumn var punchline: String
