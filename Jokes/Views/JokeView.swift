@@ -5,11 +5,15 @@
 //  Created by Leon Gell on 2023-04-14.
 //
 
+import Blackbird
 import SwiftUI
 
 struct JokeView: View {
     
     //MARK: Stored Properties
+    
+    // access the conenction to the database
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     
     //0.0 is invisible, 1.0 is visible
     @State var punchlineOpacity = 0.0
@@ -17,7 +21,7 @@ struct JokeView: View {
     // The current joke to display
     @State var currentJoke: Joke?
     
-    
+    //MARK: Computed Properties
     var body: some View {
         NavigationView {
             VStack {
@@ -25,9 +29,9 @@ struct JokeView: View {
                 Spacer()
                 
                 if let currentJoke = currentJoke {
-                   
                     
-                //Show the joke if it can be unwrapped
+                    
+                    //Show the joke if it can be unwrapped
                     Text(currentJoke.setup)
                         .font(.title)
                         .multilineTextAlignment(.center)
@@ -61,7 +65,7 @@ struct JokeView: View {
                 Button(action: {
                     // Reset the interface
                     punchlineOpacity = 0.0
-
+                    
                     Task {
                         // Get another joke
                         withAnimation {
@@ -74,7 +78,27 @@ struct JokeView: View {
                 })
                 .disabled(punchlineOpacity == 0.0 ? true : false)
                 .buttonStyle(.borderedProminent)
-              
+                
+                Button(action: {
+                    
+                    Task {
+                        if let currentJoke = currentJoke {
+                            try await db!.transaction { core in
+                                try core.query("INSERT INTO Joke (id, type, setup, punchline) VALUES (?, ?, ?, ?)",
+                                               currentJoke.id,
+                                               currentJoke.type,
+                                               currentJoke.setup,
+                                               currentJoke.punchline)
+                                
+                                
+                            }
+                        }
+                    }
+                }, label: {
+                    Text("Save for later")
+                })
+                .buttonStyle(.borderedProminent)
+                
             }
             .navigationTitle("Random Jokes")
         }
